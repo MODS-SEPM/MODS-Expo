@@ -33,6 +33,10 @@ Homebrew is a type of platform dependency installation software which would allo
 #### Step 6. Install yarn :
       npm install --global yarn
       
+#### Step 7. Install Android Studio (to check that changes work on both Android and iOS)
+
+    https://developer.android.com/studio
+      
       
 ## Windows
 
@@ -43,3 +47,25 @@ Homebrew is a type of platform dependency installation software which would allo
 #### Step 2. Install Node.js
 
     https://nodejs.org/en/
+    
+    
+#### Step 3. Install Android Studio
+
+    https://developer.android.com/studio
+    
+ 
+# Setup Environment and Run App
+
+In terminal or CMD enter the MODS-Expo folder, then run :
+        
+        yarn install 
+        
+to install all the requirements listed in package.json
+
+when all the requirements have installed, there will be a package called node_modules in the MODS-Expo folder.
+
+You can then run the app by running:
+        
+        npx expo start
+        
+and then type 'a' to run the android app, or 'i' to run the iOS app.
