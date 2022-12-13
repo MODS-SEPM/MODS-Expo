@@ -1,7 +1,8 @@
 # MODS-Expo
 MODS App created using React Native framework.
 
-    To install react native and correctly setup the environment, read the React Native Installation guide below, 
+    To install react native and correctly setup the environment, 
+    read the React Native Installation guide below
     for Mac or Windows, and then install the project dependencies.
 
 # React Native Installation Guide
@@ -17,6 +18,7 @@ Homebrew is a type of platform dependency installation software which would allo
 #### Step 2. Install Node.js :
 
   Next step is to install the node.js online using command:
+  
     brew install node
 
 #### Step 3. Install watchmen :
