@@ -1,7 +1,6 @@
 import Background from "../components/Background";
 import React, { useState, useRef, useEffect } from "react";
 import { Button, StyleSheet, Text, Alert, View } from 'react-native';
-// import { Camera } from 'expo-camera';
 import Header from '../components/Header'
 import { StatusBar } from 'expo-status-bar';
 import { Camera } from 'expo-camera';
