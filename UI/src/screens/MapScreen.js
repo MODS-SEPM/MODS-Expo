@@ -1,6 +1,9 @@
+
 import React, { useState, useEffect, Component } from 'react'
-// import { Dimensions, StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-paper'
+import React from 'react'
+import {Dimensions, StyleSheet, View, Button, Alert} from 'react-native'
+
 import Background from '../components/Background'
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import Paragraph from '../components/Paragraph'
@@ -30,8 +33,6 @@ state = {
 
   async getLocationAsync() {
     // permissions returns only for location permissions on iOS and under certain conditions, see Permissions.LOCATION
-    const { status } = await Location.requestForegroundPermissionsAsync()
-    if (status === "granted") {
       this.setState({ hasLocationPermissions: true });
       //  let location = await Location.getCurrentPositionAsync({ enableHighAccuracy: true });
       const location = await Location.getCurrentPositionAsync({ enableHighAccuracy: true });
@@ -46,23 +47,57 @@ state = {
           longitudeDelta: 0.0421,
         },
       });
-    } else {
-      alert("Location permission not granted");
     }
-  }
 
-  render() {
-    return (
-        <MapView
+
+
+export default function MapScreen() {
+    const PermissionAlert = () => {
+        Alert.alert(
+            "Location Permission",
+            "This app needs access to your location.",
+            [
+                {
+                    text: "Cancel",
+                    // run permission alert 2
+                    onPress: () => PermissionAlert2(),
+                    style: "cancel"
+                },
+                // set location permission to true
+                { text: "OK", onPress: () => console.log("OK Pressed") }
+            ]
+        );
+    }
+
+    const PermissionAlert2 = () => {
+        Alert.alert(
+            "Wait!",
+            "The map will not work without location permission.\nClick 'OK' to enable it.",
+            [
+                {
+                    text: "Cancel",
+                    onPress: () => console.log("Cancel Pressed"),
+                    style: "cancel"
+                },
+                // set location permission to true
+                { text: "OK", onPress: () => console.log("OK Pressed") }
+            ]
+        );
+    }
+    render() { return (
+      <MapView
+          // check if user has location permission
+          // call the permission alert
+          onMapReady={PermissionAlert}
           style={styles.map}
           region={this.state.mapRegion}
           onRegionChange={this.handleMapRegionChange}
           provider={PROVIDER_GOOGLE}
         />
+
     );
   }
 
-}
 
 //     const [location, setLocation] = useState(null);
 //     const [errorMsg, setErrorMsg] = useState(null);
