@@ -58,7 +58,7 @@ Homebrew is a type of platform dependency installation software which would allo
 
 In terminal or CMD enter the MODS-Expo folder, then run :
         
-        yarn install 
+    yarn install 
         
 to install all the requirements listed in package.json
 
@@ -66,6 +66,9 @@ when all the requirements have installed, there will be a package called node_mo
 
 You can then run the app by running:
         
-        npx expo start
+    npx expo start
         
 and then type 'a' to run the android app, or 'i' to run the iOS app.
+    
+    shift+i to select the exact device to run the app on.
+
