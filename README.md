@@ -58,7 +58,7 @@ Homebrew is a type of platform dependency installation software which would allo
  
 # Setup Environment and Run App
 
-In terminal or CMD enter the MODS-Expo folder, then run :
+In terminal or CMD enter the MODS-Expo/UI folder, then run :
         
     yarn install 
         
