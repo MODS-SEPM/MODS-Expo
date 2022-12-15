@@ -47,7 +47,7 @@ export default class MapScreen extends Component {
         });
     }
 
-    // PermissionAlert() {
+    // function PermissionAlert() {
     //     Alert.alert(
     //         "Location Permission",
     //         "This app needs access to your location.",
@@ -63,8 +63,7 @@ export default class MapScreen extends Component {
     //         ]
     //     );
     // }
-    //
-    // PermissionAlert2 () {
+    // function PermissionAlert2 (props) {
     //     Alert.alert(
     //         "Wait!",
     //         "The map will not work without location permission.\nClick 'OK' to enable it.",
@@ -79,6 +78,7 @@ export default class MapScreen extends Component {
     //         ]
     //     );
     // }
+
 
 render() {return (
     <MapView
