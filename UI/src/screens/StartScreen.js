@@ -8,7 +8,7 @@ import Paragraph from '../components/Paragraph'
 export default function StartScreen({ navigation }) {
   return (
     <Background>
-      {/*<Logo />*/}
+      <Logo />
       {/*<Header>Mods</Header>*/}
       {/*<Paragraph>*/}
       {/*  The easiest way to start with your amazing application.*/}
