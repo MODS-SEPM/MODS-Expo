@@ -2,7 +2,7 @@ import Background from "../components/Background";
 import React from "react";
 import QRCode from 'react-native-qrcode-svg';
 
-export default function QRScreen({ navigation }) {
+export default function QRScreen() {
   return (
       <Background>
       <QRCode

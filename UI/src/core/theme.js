@@ -4,10 +4,10 @@ export const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    text: '#000000',
-    primary: '#000000',
+    text: '#ffffff',
+    primary: '#f3b344',
     secondary: '#414757',
     error: '#f13a59',
-    background: '#093583'
+    background: '#1f2272'
   },
 }
