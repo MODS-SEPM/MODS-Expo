@@ -7,9 +7,32 @@ import {StyleSheet, Text, View} from "react-native";
 import Header from '../components/Header'
 import {Button} from "react-native-paper";
 // import Icon from 'react-native-vector-icons/FontAwesome';
-
+import { Audio } from "expo-av";
 
 export default function AudioScreen() {
+
+    const [sound, setSound] = React.useState();
+
+  async function playSound() {
+    console.log('Loading Sound');
+    const { sound } = await Audio.Sound.createAsync( require('../assets/audio.mp3')
+    );
+    setSound(sound);
+
+    console.log('Playing Sound');
+    await sound.playAsync();
+  }
+
+  React.useEffect(() => {
+    return sound
+      ? () => {
+          console.log('Unloading Sound');
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
+
+
   return (
         <Background>
 
@@ -28,7 +51,8 @@ export default function AudioScreen() {
                         icon="play"
                         mode="contained"
                         // onPress={pauseButton()}
-                        onPress={() => console.log('Pressed play')}
+                        onPress={playSound}
+                        // onPress={() => console.log('Pressed play')}
                     />
                 </View>
                 <View style={styles.buttonStyle}>
