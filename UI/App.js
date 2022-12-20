@@ -17,6 +17,8 @@ import {
   QRScreen,
   AudioScreen,
   CameraScreen,
+  ModsScreen,
+  SettingsScreen
 } from './src/screens'
 
 const Stack = createStackNavigator()
@@ -29,15 +31,17 @@ function Content() {
               tabBarIcon: ({ focused, color, size }) => {
                   let iconName;
                   if (route.name === 'Map') {
-                      iconName = focused
-                          ? 'navigate'
-                          : 'navigate-outline';
+                      iconName = focused ? 'navigate' : 'navigate-outline';
                   } else if (route.name === 'QR Code') {
                       iconName = focused ? 'qr-code' : 'qr-code-outline';
                   } else if (route.name === 'Audio Guide') {
                       iconName = focused ? 'headset' : 'headset-outline';
                   } else if (route.name === 'Camera') {
                       iconName = focused ? 'camera' : 'camera-outline';
+                  } else if (route.name === 'Mods') {
+                      iconName = focused ? 'cube' : 'cube-outline';
+                  } else if (route.name === 'Settings') {
+                      iconName = focused ? 'settings' : 'settings-outline';
                   }
                   return <Ionicons name={iconName} size={size} color={color}/>;
               },
@@ -52,6 +56,8 @@ function Content() {
         <Tab.Screen name='QR Code' component={QRScreen} options={{headerShown: false}} />
         <Tab.Screen name='Audio Guide' component={AudioScreen} options={{headerShown: false}} />
         <Tab.Screen name='Camera' component={CameraScreen} options={{headerShown: false}} />
+        <Tab.Screen name='Mods' component={ModsScreen} options={{headerShown: false}} />
+        <Tab.Screen name='Settings' component={SettingsScreen} options={{headerShown: false}} />
 
       </Tab.Navigator>
   );
