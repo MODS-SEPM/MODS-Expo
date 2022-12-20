@@ -1,125 +1,138 @@
-// import Background from "../components/Background";
-// import React from "react";
-// import Header from '../components/Header'
-// import {StyleSheet, View} from "react-native";
-// import {Button} from "react-native-paper";
-// import {theme} from "../core/theme";
-// import {useState} from "react";
-// import { Switch } from 'react-native';
-//
-// //const [isOn, setIsOn] = useState(false);
-//
-// export default function SettingsScreen() {
-//
-//     return (
-//         <Background>
-//
-//         <Header>
-//           SettingsScreen
-//         </Header>
-//
-//
-//         <View style={{ flexDirection:"column", justifyContent: 'center' }}>
-//             <View style={styles.switchStyle}>
-//
-//                 <Switch
-//
-//               // value={isOn}
-//               // onValueChange={setIsOn}
-//                  />
-//             </View>
-//             {/*<View style={styles.switchStyle}>*/}
-//             {/*    <Text>Dark Mode</Text>*/}
-//             {/*    <Switch*/}
-//             {/*  // value={isOn}*/}
-//             {/*  // onValueChange={setIsOn}*/}
-//             {/*     />*/}
-//             {/*</View>*/}
-//             {/*<View style={styles.switchStyle}>*/}
-//             {/*    <Text>Dark Mode</Text>*/}
-//             {/*    <Switch*/}
-//             {/*  // value={isOn}*/}
-//             {/*  // onValueChange={setIsOn}*/}
-//             {/*     />*/}
-//             {/*</View>*/}
-//         </View>
-//
-//         </Background>
-//     ) }
-//
-// const styles = StyleSheet.create({
-//     map: {
-//         height: '50%',
-//         width: '50%',
-//     },
-//     switchStyle: {
-//         // marginHorizontal: 25,
-//         borderRadius: 500,
-//         marginTop: 575,
-//         justifyContent: 'center',
-//         alignItems: 'stretch',
-//     },
-//     iconStyle: {
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//     }
-// });
+import React, {useState} from 'react';
+import Background from '../components/Background'
+import {Dimensions, Text, View, StyleSheet, Pressable, TouchableOpacity, Image} from 'react-native';
+import Button from "../components/Button";
+import Checkbox from 'expo-checkbox';
+import {theme} from "../core/theme";
 
 
-//This is an example code to understand Switch//
+export default function SettingsScreen({ navigation }) {
+    const [isChecked1, setChecked1] = useState(false);
+    const [isChecked2, setChecked2] = useState(false);
+    const [isChecked3, setChecked3] = useState(false);
+    const [isChecked4, setChecked4] = useState(true);
+    const [isChecked5, setChecked5] = useState(true);
+    const [isChecked6, setChecked6] = useState(false);
 
-import React from 'react';
-//import react in our code.
-
-import { Switch, Text, View, StyleSheet } from 'react-native';
-//import all the components we are going to use.
-
-export default class App extends React.Component {
-  //Initial state false for the switch. You can change it to true just to see.
-  state = { switchValue: false };
-  state1 = { switchValue: false };
-
-  toggleSwitch = value => {
-    //onValueChange of the switch this function will be called
-    this.setState({ switchValue: value });
-    //state changes according to switch
-    //which will result in re-render the text
-  };
-
-   toggleSwitch2 = value => {
-    //onValueChange of the switch this function will be called
-    this.setState({ switchValue: value });
-    //state changes according to switch
-    //which will result in re-render the text
-  };
-
-  render() {
     return (
-      <View style={styles.container}>
-        {/*Text to show the text according to switch condition*/}
-        <Text>{this.state.switchValue ? 'Switch is ON' : 'Switch is OFF'}</Text>
+    <Background>
 
-        {/*Switch with value set in constructor*/}
-        {/*onValueChange will be triggered after switch condition changes*/}
-        <Switch
-          style={{ marginTop: 30 }}
-          onValueChange={this.toggleSwitch2}
-          value={this.state.switchValue}
-        />
-        <Switch
-          style={{ marginTop: 30 }}
-          onValueChange={this.toggleSwitch}
-          value={this.state1.switchValue}
-        />
-      </View>
+        <View style={styles.container}>
+
+            <View style={styles.contentContainer}>
+
+                <Text style={{marginTop:50, textAlign:'left', fontSize:25, fontWeight:'bold'}}>Selections</Text>
+
+
+                <Text style={{marginTop:15, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold'}}>Your Food Preferences</Text>
+
+
+                 <View style={{ flexDirection: "row"}}>
+                    <Text style={{marginTop:15, marginLeft:25,textAlign:'left', fontSize:20,}}>Vegetarian</Text>
+                     <Checkbox
+                      style={{marginTop: 18, marginLeft: 78}}
+                      value={isChecked1}
+                      onValueChange={setChecked1}
+                      color={isChecked1 ? '#f3b344' : undefined}
+                    />
+                </View>
+
+                <View style={{ flexDirection: "row"}}>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Vegan</Text>
+                     <Checkbox
+                      style={{marginTop: 13, marginLeft: 116}}
+                      value={isChecked2}
+                      onValueChange={setChecked2}
+                      color={isChecked2 ? '#f3b344' : undefined}
+                    />
+                </View>
+
+                <View style={{ flexDirection: "row"}}>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Nut Allergy</Text>
+                     <Checkbox
+                      style={{marginTop: 13, marginLeft: 75}}
+                      value={isChecked3}
+                      onValueChange={setChecked3}
+                      color={isChecked3 ? '#f3b344' : undefined}
+                    />
+                </View>
+
+                <Text style={{marginTop:30, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold'}}>Permissions</Text>
+
+                <View style={{ flexDirection: "row"}}>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Map</Text>
+                     <Checkbox
+                      style={{marginTop: 13, marginLeft: 130}}
+                      value={isChecked4}
+                      onValueChange={setChecked4}
+                      color={isChecked4 ? '#f3b344' : undefined}
+                    />
+                </View>
+
+                <View style={{ flexDirection: "row"}}>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Camera</Text>
+                     <Checkbox
+                      style={{marginTop: 13, marginLeft: 100}}
+                      value={isChecked5}
+                      onValueChange={setChecked5}
+                      color={isChecked5 ? '#f3b344' : undefined}
+                    />
+                </View>
+
+                <Text style={{marginTop:30, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold'}}>Appearance</Text>
+
+                <View style={{ flexDirection: "row"}}>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Dark Mode</Text>
+                     <Checkbox
+                      style={{marginTop: 13, marginLeft: 72}}
+                      value={isChecked6}
+                      onValueChange={setChecked6}
+                      color={isChecked6 ? '#f3b344' : undefined}
+                    />
+                </View>
+
+            </View>
+
+            </View>
+
+            <View style={styles.footer}>
+                <Button
+                    mode="outlined"
+                    onPress={() =>
+                        navigation.reset({
+                        index: 0,
+                        routes: [{ name: 'StartScreen' }],
+                      })
+                    }
+                >
+                    Logout
+                </Button>
+            </View>
+    </Background>
+
+
+
     );
-  }
+
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row'
-  },
+        flex: 1,
+    },
+
+    contentContainer: {
+        flex: 1,
+        width: Dimensions.get('window').width,
+        marginLeft: 50
+    },
+    footer: {
+        height: 100
+    },
+    options: {
+        flex: 66,
+        width: 20,
+        resizeMode: "contain",
+        marginLeft: 20,
+    },
+
 });

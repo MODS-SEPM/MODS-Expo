@@ -43,8 +43,8 @@ export default function ModsScreen() {
                             <Image source={require('../assets/logo.png')} style={styles.logo}/>
                         </TouchableOpacity>
                         <View>
-                            <Text style={styles.modTitle}>Movie</Text>
-                            <Text style={styles.modDescription}>Explore all the movie scenes in Vienna</Text>
+                            <Text style={styles.modTitle}>Movies</Text>
+                            <Text style={styles.modDescription}>See your favourites come to life</Text>
                         </View>
                         <TouchableOpacity>
                             <Image source={require('../assets/options.png')} style={styles.options}/>
@@ -58,8 +58,8 @@ export default function ModsScreen() {
                             <Image source={require('../assets/logo.png')} style={styles.logo}/>
                         </TouchableOpacity>
                         <View>
-                            <Text style={styles.modTitle}>Mod title</Text>
-                            <Text style={styles.modDescription}>some description about the mod</Text>
+                            <Text style={styles.modTitle}>Art</Text>
+                            <Text style={styles.modDescription}>See historical art all around you</Text>
                         </View>
                         <TouchableOpacity>
                             <Image source={require('../assets/options.png')} style={styles.options}/>
