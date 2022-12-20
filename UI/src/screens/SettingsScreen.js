@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import Background from '../components/Background'
-import {Dimensions, Text, View, StyleSheet, Pressable, TouchableOpacity, Image} from 'react-native';
+import {Dimensions, Text, View, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import Button from "../components/Button";
 import Checkbox from 'expo-checkbox';
+import Header from '../components/Header'
 import {theme} from "../core/theme";
 
 
@@ -21,7 +22,7 @@ export default function SettingsScreen({ navigation }) {
 
             <View style={styles.contentContainer}>
 
-                <Text style={{marginTop:50, textAlign:'left', fontSize:25, fontWeight:'bold'}}>Selections</Text>
+                <Text style={{marginTop:50, textAlign:'left', fontSize:25, fontWeight:'bold'}}>Settings</Text>
 
 
                 <Text style={{marginTop:15, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold'}}>Your Food Preferences</Text>
