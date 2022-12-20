@@ -40,15 +40,15 @@ export default function AudioScreen() {
     return (
         <Background>
         <View style={styles.container}>
-            <View style={{ flex: 6, marginTop: 26 }}>
-                <Header>Audio Player</Header>
+            <View style={{ flex: 4, marginTop: 40 }}>
+                <Header>Audio Guide</Header>
             </View>
-            <View style={{ flex: 7 }}>
+            <View style={{ flex: 8 }}>
                 <Logo />
             </View>
 
-            <View style={{ flex: 1}}>
-                <Text style={styles.title}>Title of the MODS cassette</Text>
+            <View style={{ flex: 2}}>
+                <Text style={styles.title}>Skating in Vienna</Text>
             </View>
 
             <View style={{ flex: 2, flexDirection: "row" }}>
@@ -56,7 +56,7 @@ export default function AudioScreen() {
                     <Text style={styles.time}>1:34</Text>
                 </View>
                 <Slider
-                    style={{width: 320}}
+                    style={{width: 290}}
                     minimumValue={0}
                     maximumValue={100}
                     maximumTrackTintColor="#000000"
@@ -68,7 +68,7 @@ export default function AudioScreen() {
                 </View>
             </View>
 
-            <View style={{ flex: 4, flexDirection:"row", justifyContent: 'center' }}>
+            <View style={{ flex: 5, flexDirection:"row", justifyContent: 'center' }}>
                 <View style={styles.buttonStyle}>
                     <Button
                         labelStyle={{ fontSize: 44 }}
@@ -108,7 +108,7 @@ export default function AudioScreen() {
                 </View>
                 <View>
                     <Slider
-                        style={{width: 260, marginTop: -4}}
+                        style={{width: 240, marginTop: -4}}
                         minimumValue={0}
                         maximumValue={100}
                         maximumTrackTintColor="#000000"
@@ -117,7 +117,7 @@ export default function AudioScreen() {
                     />
                 </View>
                 <View>
-                    <Button style={{marginLeft: 15, marginRight: -10}}
+                    <Button style={{marginLeft: 10, marginRight: -10}}
                         labelStyle={{ fontSize: 19 }}
                         icon={volume}
                         //mode="contained"

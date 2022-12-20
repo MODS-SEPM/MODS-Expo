@@ -9,7 +9,7 @@ export default function ModsScreen() {
             <View style={styles.container}>
                 <View style={{ flex: 2, marginTop: 26 }}>
                     <Header>
-                        ModsScreen
+                        Mods
                     </Header>
                 </View>
 
@@ -125,14 +125,14 @@ const styles = StyleSheet.create({
     filter: {
         width: 20,
         height: 20,
-        marginLeft: 0,
-        marginRight: 170,
+        marginLeft: 80,
+        marginRight: 150,
     },
     menu: {
         width: 20,
         height: 20,
-        marginLeft: 170,
-        marginRight: 0,
+        marginLeft: 150,
+        marginRight: 80,
     },
     modTitle: {
         justifyContent: 'center',
