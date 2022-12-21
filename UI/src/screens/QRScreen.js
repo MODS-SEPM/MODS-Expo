@@ -11,9 +11,10 @@ export default function QRScreen() {
       <Text style={styles.text}> Share your current itinerary with a friend :) </Text>
       <QRCode
       // value="https://www.youtube.com/"
-          value = "exp://192.168.8.169:19000"
+          value = "exp://10.24.117.234:19000"
       size={310}
       backgroundColor = 'transparent'
+          color= {theme.colors.primary}
     />
 
       </Background>

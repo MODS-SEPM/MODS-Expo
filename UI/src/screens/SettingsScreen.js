@@ -22,14 +22,14 @@ export default function SettingsScreen({ navigation }) {
 
             <View style={styles.contentContainer}>
 
-                <Text style={{marginTop:50, textAlign:'left', fontSize:25, fontWeight:'bold'}}>Settings</Text>
+                <Text style={{marginTop:50, textAlign:'left', fontSize:25, fontWeight:'bold', color:theme.colors.primary}}>Settings</Text>
 
 
-                <Text style={{marginTop:15, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold'}}>Your Food Preferences</Text>
+                <Text style={{marginTop:15, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold', color:theme.colors.secondary}}>Your Food Preferences</Text>
 
 
                  <View style={{ flexDirection: "row"}}>
-                    <Text style={{marginTop:15, marginLeft:25,textAlign:'left', fontSize:20,}}>Vegetarian</Text>
+                    <Text style={{marginTop:15, marginLeft:25,textAlign:'left', fontSize:20, color:theme.colors.secondary}}>Vegetarian</Text>
                      <Checkbox
                       style={{marginTop: 18, marginLeft: 78}}
                       value={isChecked1}
@@ -39,7 +39,7 @@ export default function SettingsScreen({ navigation }) {
                 </View>
 
                 <View style={{ flexDirection: "row"}}>
-                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Vegan</Text>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20, color:theme.colors.secondary}}>Vegan</Text>
                      <Checkbox
                       style={{marginTop: 13, marginLeft: 116}}
                       value={isChecked2}
@@ -49,7 +49,7 @@ export default function SettingsScreen({ navigation }) {
                 </View>
 
                 <View style={{ flexDirection: "row"}}>
-                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Nut Allergy</Text>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20, color:theme.colors.secondary}}>Nut Allergy</Text>
                      <Checkbox
                       style={{marginTop: 13, marginLeft: 75}}
                       value={isChecked3}
@@ -58,10 +58,10 @@ export default function SettingsScreen({ navigation }) {
                     />
                 </View>
 
-                <Text style={{marginTop:30, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold'}}>Permissions</Text>
+                <Text style={{marginTop:30, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold', color:theme.colors.secondary}}>Permissions</Text>
 
                 <View style={{ flexDirection: "row"}}>
-                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Map</Text>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20, color:theme.colors.secondary}}>Map</Text>
                      <Checkbox
                       style={{marginTop: 13, marginLeft: 130}}
                       value={isChecked4}
@@ -71,7 +71,7 @@ export default function SettingsScreen({ navigation }) {
                 </View>
 
                 <View style={{ flexDirection: "row"}}>
-                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Camera</Text>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20, color:theme.colors.secondary}}>Camera</Text>
                      <Checkbox
                       style={{marginTop: 13, marginLeft: 100}}
                       value={isChecked5}
@@ -80,10 +80,10 @@ export default function SettingsScreen({ navigation }) {
                     />
                 </View>
 
-                <Text style={{marginTop:30, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold'}}>Appearance</Text>
+                <Text style={{marginTop:30, marginLeft:25,textAlign:'left', fontSize:20, fontWeight:'bold', color:theme.colors.secondary}}>Appearance</Text>
 
                 <View style={{ flexDirection: "row"}}>
-                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20,}}>Dark Mode</Text>
+                    <Text style={{marginTop:10, marginLeft:25,textAlign:'left', fontSize:20, color:theme.colors.secondary}}>Dark Mode</Text>
                      <Checkbox
                       style={{marginTop: 13, marginLeft: 72}}
                       value={isChecked6}
